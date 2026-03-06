@@ -6,11 +6,13 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     studio: '',
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -19,10 +21,27 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    setError('');
+    
+    try {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
+      
+      setIsSubmitted(true);
+    } catch (err) {
+      setError('Failed to submit. Please try again or call us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -120,7 +139,7 @@ const Contact = () => {
                   <button
                     onClick={() => {
                       setIsSubmitted(false);
-                      setFormData({ name: '', email: '', studio: '', message: '' });
+                      setFormData({ name: '', email: '', phone: '', studio: '', message: '' });
                     }}
                     className="mt-6 bg-[#1C1C21] text-gray-300 px-6 py-3 rounded-lg hover:bg-[#24242A] hover:text-white transition-all"
                     data-testid="send-another-btn"
@@ -130,10 +149,15 @@ const Contact = () => {
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {error && (
+                    <div className="bg-red-900/30 border border-red-800 text-red-400 px-4 py-3 rounded-lg text-sm">
+                      {error}
+                    </div>
+                  )}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2 block">
-                        Your Name
+                        Your Name <span className="text-red-400">*</span>
                       </label>
                       <input
                         type="text"
@@ -148,7 +172,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <label className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2 block">
-                        Email
+                        Email <span className="text-red-400">*</span>
                       </label>
                       <input
                         type="email"
@@ -162,23 +186,40 @@ const Contact = () => {
                       />
                     </div>
                   </div>
-                  <div>
-                    <label className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2 block">
-                      Studio Name
-                    </label>
-                    <input
-                      type="text"
-                      name="studio"
-                      value={formData.studio}
-                      onChange={handleChange}
-                      placeholder="Your Fitness Studio"
-                      className="input-custom"
-                      data-testid="contact-studio-input"
-                    />
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2 block">
+                        Phone Number <span className="text-red-400">*</span>
+                      </label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder="+91 98765 43210"
+                        required
+                        className="input-custom"
+                        data-testid="contact-phone-input"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2 block">
+                        Studio Name
+                      </label>
+                      <input
+                        type="text"
+                        name="studio"
+                        value={formData.studio}
+                        onChange={handleChange}
+                        placeholder="Your Fitness Studio"
+                        className="input-custom"
+                        data-testid="contact-studio-input"
+                      />
+                    </div>
                   </div>
                   <div>
                     <label className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2 block">
-                      Message
+                      Message <span className="text-red-400">*</span>
                     </label>
                     <textarea
                       name="message"
