@@ -5,29 +5,29 @@ import { Star, Quote } from 'lucide-react';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: 'Marcus Thompson',
-      role: 'Owner, Iron Athletics',
+      name: 'Karthik Rajan',
+      role: 'Owner, Iron Athletics, T. Nagar',
       image: 'https://images.unsplash.com/photo-1594749948869-3039d90d7949?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdCUyMGRpdmVyc2UlMjBmaXRuZXNzJTIwY29hY2hlcyUyMHNtaWxpbmd8ZW58MHx8fHwxNzcyODAyNDYzfDA&ixlib=rb-4.1.0&q=85',
-      quote: 'FitViz transformed how we run our gym. Member retention increased by 40% in just 3 months. The automated billing alone saves us hours every week.',
+      quote: 'FitViz transformed how we run our gym in Chennai. Member retention increased by 40% in just 3 months. The automated billing alone saves us hours every week.',
       rating: 5,
     },
     {
-      name: 'Jennifer Liu',
-      role: 'Director, Zen Fitness Studio',
+      name: 'Priya Venkatesh',
+      role: 'Director, Zen Fitness Studio, Anna Nagar',
       image: 'https://images.unsplash.com/photo-1737608744496-ff6138a8584a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdCUyMGRpdmVyc2UlMjBmaXRuZXNzJTIwY29hY2hlcyUyMHNtaWxpbmd8ZW58MHx8fHwxNzcyODAyNDYzfDA&ixlib=rb-4.1.0&q=85',
       quote: "The scheduling feature is a game-changer. No more double bookings, no more confusion. Our trainers love it, and our members appreciate the seamless experience.",
       rating: 5,
     },
     {
-      name: 'David Rodriguez',
-      role: 'Founder, Peak Performance',
+      name: 'Arun Kumar',
+      role: 'Founder, Peak Performance, OMR',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
       quote: "We've tried several studio management tools. FitViz is by far the most comprehensive and easiest to use. The analytics dashboard gives us insights we never had before.",
       rating: 5,
     },
     {
-      name: 'Sarah Mitchell',
-      role: 'Manager, CrossFit Elite',
+      name: 'Deepika Sharma',
+      role: 'Manager, CrossFit Elite, Velachery',
       image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face',
       quote: 'From onboarding new members to tracking their progress, FitViz handles it all. Our coaches can focus on what they do best - training people.',
       rating: 5,
@@ -45,7 +45,7 @@ const Testimonials = () => {
           className="text-center mb-16"
         >
           <span className="text-sm font-semibold text-[#b8ec00] uppercase tracking-wider mb-4 block">
-            Trusted by 500+ Studios
+            Trusted by 50+ Studios in Chennai
           </span>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
             What Our <span className="text-[#C8FF00]">Clients</span> Say
@@ -106,15 +106,15 @@ const Testimonials = () => {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <p className="text-4xl md:text-5xl font-bold text-white">500+</p>
-              <p className="text-sm text-gray-400 mt-1">Active Studios</p>
+              <p className="text-4xl md:text-5xl font-bold text-white">50+</p>
+              <p className="text-sm text-gray-400 mt-1">Studios in Chennai</p>
             </div>
             <div>
-              <p className="text-4xl md:text-5xl font-bold text-white">50K+</p>
+              <p className="text-4xl md:text-5xl font-bold text-white">10K+</p>
               <p className="text-sm text-gray-400 mt-1">Members Managed</p>
             </div>
             <div>
-              <p className="text-4xl md:text-5xl font-bold text-white">99.9%</p>
+              <p className="text-4xl md:text-5xl font-bold text-white">99.2%</p>
               <p className="text-sm text-gray-400 mt-1">Uptime</p>
             </div>
             <div>

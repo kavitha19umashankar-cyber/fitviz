@@ -404,9 +404,9 @@ const Features = () => {
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                         {/* Location Cards */}
                         {[
-                          { name: 'Downtown Branch', members: 534, revenue: '₹2.8L', attendance: 89, color: '#C8FF00' },
-                          { name: 'Whitefield Branch', members: 421, revenue: '₹2.1L', attendance: 92, color: '#4ade80' },
-                          { name: 'Indiranagar Branch', members: 690, revenue: '₹3.5L', attendance: 87, color: '#60a5fa' }
+                          { name: 'T. Nagar Branch', members: 534, revenue: '₹2.8L', attendance: 89, color: '#C8FF00' },
+                          { name: 'Anna Nagar Branch', members: 421, revenue: '₹2.1L', attendance: 92, color: '#4ade80' },
+                          { name: 'OMR Branch', members: 690, revenue: '₹3.5L', attendance: 87, color: '#60a5fa' }
                         ].map((location, i) => (
                           <div key={i} className="bg-[#1C1C21] rounded-lg border border-[#303038] p-3 hover:border-opacity-50 transition-colors" style={{borderColor: location.color, borderOpacity: 0.3}}>
                             <div className="flex items-center gap-2 mb-3">
@@ -434,7 +434,7 @@ const Features = () => {
                       <div className="mt-3 bg-[#1C1C21] rounded-lg border border-[#303038] p-3 flex items-center justify-between">
                         <div className="flex items-center gap-2">
                           <Building2 className="w-4 h-4 text-[#C8FF00]" />
-                          <span className="text-xs text-gray-400">Total across 3 locations</span>
+                          <span className="text-xs text-gray-400">Total across 3 locations in Chennai</span>
                         </div>
                         <div className="flex gap-4">
                           <div className="text-center">

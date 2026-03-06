@@ -41,7 +41,7 @@ const Contact = () => {
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Bangalore, India',
+      value: 'Chennai, India',
       href: '#',
     },
   ];
