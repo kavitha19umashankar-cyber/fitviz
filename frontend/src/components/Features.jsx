@@ -403,13 +403,47 @@ const Features = () => {
           transition={{ delay: 0.3 }}
           className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
 
-          <div className="bg-[#16161A] border border-[#24242A] rounded-xl p-6 flex items-center gap-4 hover:border-[#4ade80]/30 transition-colors">
-            <div className="w-12 h-12 bg-[#4ade80]/10 border border-[#4ade80]/20 rounded-lg flex items-center justify-center">
-              <TrendingUp className="w-6 h-6 text-[#4ade80]" />
+          <div className="bg-[#16161A] border border-[#24242A] rounded-xl p-4 hover:border-[#4ade80]/30 transition-colors">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 bg-[#4ade80]/10 border border-[#4ade80]/20 rounded-lg flex items-center justify-center">
+                <TrendingUp className="w-5 h-5 text-[#4ade80]" />
+              </div>
+              <div>
+                <h4 className="text-base font-bold text-white">Analytics & Reports</h4>
+                <p className="text-xs text-gray-400">Track revenue, growth, and engagement</p>
+              </div>
             </div>
-            <div>
-              <h4 className="text-lg font-bold text-white">Analytics & Reports</h4>
-              <p className="text-sm text-gray-400">Track revenue, growth, and member engagement in real-time.</p>
+            {/* Dashboard Stats Grid */}
+            <div className="grid grid-cols-4 gap-2 mb-3">
+              <div className="bg-[#1C1C21] border border-[#C8FF00]/30 rounded-lg p-2">
+                <p className="text-[9px] text-gray-500 uppercase">Members</p>
+                <p className="text-lg font-bold text-white">6</p>
+                <p className="text-[8px] text-[#4ade80]">+1 this month</p>
+              </div>
+              <div className="bg-[#1C1C21] border border-cyan-500/30 rounded-lg p-2">
+                <p className="text-[9px] text-gray-500 uppercase">Attendance</p>
+                <p className="text-lg font-bold text-white">0</p>
+                <p className="text-[8px] text-gray-500">2 this month</p>
+              </div>
+              <div className="bg-[#1C1C21] border border-orange-500/30 rounded-lg p-2">
+                <p className="text-[9px] text-gray-500 uppercase">Revenue</p>
+                <p className="text-lg font-bold text-white">₹1.5k</p>
+                <p className="text-[8px] text-red-400">↓88% vs last</p>
+              </div>
+              <div className="bg-[#1C1C21] border border-blue-500/30 rounded-lg p-2">
+                <p className="text-[9px] text-gray-500 uppercase">Plans</p>
+                <p className="text-lg font-bold text-white">4</p>
+                <p className="text-[8px] text-gray-500">0 expiring</p>
+              </div>
+            </div>
+            {/* Mini Bar Chart */}
+            <div className="bg-[#1C1C21] rounded-lg p-2 border border-[#303038]">
+              <p className="text-[9px] text-gray-500 uppercase mb-2">Daily Attendance</p>
+              <div className="flex items-end gap-1 h-8">
+                {[30, 30, 60, 60, 100, 100, 100, 30, 30].map((h, i) => (
+                  <div key={i} className="flex-1 bg-[#C8FF00] rounded-t" style={{height: `${h}%`}} />
+                ))}
+              </div>
             </div>
           </div>
           <div className="bg-[#16161A] border border-[#24242A] rounded-xl p-6 flex items-center gap-4 hover:border-[#C8FF00]/30 transition-colors">
