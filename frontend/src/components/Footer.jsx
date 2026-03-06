@@ -1,5 +1,6 @@
 import React from 'react';
 import { Instagram, Twitter, Linkedin, Youtube, ArrowUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -26,7 +27,7 @@ const Footer = () => {
       { label: 'Status', href: '#' },
     ],
     legal: [
-      { label: 'Privacy Policy', href: '#' },
+      { label: 'Privacy Policy', href: '/privacy-policy' },
       { label: 'Terms of Service', href: '#' },
       { label: 'Cookie Policy', href: '#' },
     ],
@@ -90,9 +91,15 @@ const Footer = () => {
               <ul className="space-y-3">
                 {footerLinks.legal.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors">
-                      {link.label}
-                    </a>
+                    {link.href.startsWith('/') ? (
+                      <Link to={link.href} className="text-sm text-gray-400 hover:text-white transition-colors">
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <a href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors">
+                        {link.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
