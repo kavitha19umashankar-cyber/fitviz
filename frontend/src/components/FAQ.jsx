@@ -84,7 +84,7 @@ const FAQ = () => {
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <section className="py-24 md:py-32 bg-[#09090B]">
+    <section id="faq" className="py-24 md:py-32 bg-[#09090B]">
       <div className="max-w-4xl mx-auto px-6 md:px-12">
         {/* Header */}
         <motion.div
@@ -93,9 +93,6 @@ const FAQ = () => {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <span className="text-sm font-semibold text-[#b8ec00] uppercase tracking-wider mb-4 block">
-            FAQ
-          </span>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-4">
             Frequently Asked <span className="text-[#C8FF00]">Questions</span>
           </h2>
