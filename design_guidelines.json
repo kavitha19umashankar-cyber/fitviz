@@ -1,0 +1,134 @@
+{
+  "design_vision": {
+    "identity": "The Performance Pro",
+    "core_philosophy": "Elite Athleticism & Precision. Dark, moody, high-contrast. No 'friendly' rounded corners—sharp, tactical, effective.",
+    "emotional_tone": "Commanding, Trustworthy, energetic, High-Performance",
+    "theme_mode": "dark"
+  },
+  "typography": {
+    "primary_font": "Inter",
+    "secondary_font": "Barlow Condensed",
+    "mono_font": "JetBrains Mono",
+    "scale": {
+      "h1": "text-6xl md:text-8xl font-black tracking-tighter uppercase leading-none",
+      "h2": "text-4xl md:text-6xl font-bold tracking-tight uppercase",
+      "h3": "text-2xl md:text-3xl font-bold tracking-normal",
+      "body": "text-base md:text-lg text-zinc-400 font-normal leading-relaxed",
+      "label": "text-xs font-mono uppercase tracking-[0.2em] text-zinc-500"
+    },
+    "instructions": "Import 'Barlow Condensed' and 'JetBrains Mono' from Google Fonts. Use Barlow for all headings to give that 'sports magazine' feel. Use Inter for body copy."
+  },
+  "colors": {
+    "palette": {
+      "background": "#09090B",
+      "surface": "#18181B",
+      "surface_highlight": "#27272A",
+      "primary": "#3B82F6",
+      "primary_glow": "rgba(59, 130, 246, 0.5)",
+      "accent": "#22C55E",
+      "text_primary": "#FAFAFA",
+      "text_secondary": "#A1A1AA",
+      "border": "#27272A"
+    },
+    "gradients": {
+      "hero_glow": "radial-gradient(circle at center, rgba(59, 130, 246, 0.15) 0%, rgba(9, 9, 11, 0) 70%)",
+      "card_surface": "linear-gradient(180deg, rgba(24, 24, 27, 0.8) 0%, rgba(24, 24, 27, 0.4) 100%)",
+      "beam": "linear-gradient(90deg, transparent, #3B82F6, transparent)"
+    },
+    "rules": "Never use pure black (#000000). Use Zinc-950 (#09090B). Use Blue for primary actions/brand, Green for positive data (charts), Red for error/destructive."
+  },
+  "layout_strategy": {
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "spacing": "Relaxed. Section padding should be py-24 or py-32.",
+    "grid_system": "Bento Grid (Mode A). Mix of col-span-12, col-span-8, col-span-4. Asymmetric layouts are mandatory.",
+    "border_radius": "rounded-none or rounded-sm (max 4px). Sharp edges convey precision."
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-blue-600 text-white hover:bg-blue-500 font-bold uppercase tracking-wider rounded-none px-8 py-4 transition-all hover:translate-x-1 hover:-translate-y-1 shadow-[4px_4px_0px_0px_#ffffff]",
+      "secondary": "bg-transparent border border-zinc-700 text-white hover:border-white hover:bg-white/5 font-bold uppercase tracking-wider rounded-none px-8 py-4"
+    },
+    "cards": {
+      "style": "bg-zinc-900/50 border border-white/10 backdrop-blur-md rounded-sm hover:border-blue-500/50 transition-colors group relative overflow-hidden",
+      "highlight": "Add a glowing spotlight effect on hover."
+    },
+    "navbar": {
+      "style": "fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-xl border-b border-white/5 h-20 flex items-center"
+    }
+  },
+  "assets": {
+    "logo_text": "FitViz",
+    "logo_style": "font-black tracking-tighter text-2xl uppercase italic",
+    "images": {
+      "hero_bg": "https://images.pexels.com/photos/29392546/pexels-photo-29392546.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "feature_trainer": "https://images.unsplash.com/photo-1758875569414-120ebc62ada3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHw0fHxmaXRuZXNzJTIwdHJhaW5lciUyMHVzaW5nJTIwZGlnaXRhbCUyMHRhYmxldCUyMGluJTIwZ3ltfGVufDB8fHx8MTc3MjgwMjQ2MXww&ixlib=rb-4.1.0&q=85",
+      "feature_diet": "https://images.pexels.com/photos/30635719/pexels-photo-30635719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "feature_class": "https://images.unsplash.com/photo-1700784795176-7ff886439d79?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwxfHxoaWdoJTIwaW50ZW5zaXR5JTIwaW50ZXJ2YWwlMjB0cmFpbmluZyUyMGNsYXNzJTIwZGFya3xlbnwwfHx8fDE3NzI4MDI0NjF8MA&ixlib=rb-4.1.0&q=85",
+      "testimonial_1": "https://images.unsplash.com/photo-1594749948869-3039d90d7949?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdCUyMGRpdmVyc2UlMjBmaXRuZXNzJTIwY29hY2hlcyUyMHNtaWxpbmd8ZW58MHx8fHwxNzcyODAyNDYzfDA&ixlib=rb-4.1.0&q=85",
+      "testimonial_2": "https://images.unsplash.com/photo-1737608744496-ff6138a8584a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdCUyMGRpdmVyc2UlMjBmaXRuZXNzJTIwY29hY2hlcyUyMHNtaWxpbmd8ZW58MHx8fHwxNzcyODAyNDYzfDA&ixlib=rb-4.1.0&q=85"
+    }
+  },
+  "sections_breakdown": {
+    "header": {
+      "elements": ["Logo (Left)", "Nav Links (Center)", "Get Demo Button (Right)"],
+      "nav_links": ["Features", "Pricing", "Testimonials", "Contact"]
+    },
+    "hero": {
+      "layout": "Split Layout (Left Text, Right 3D Visual) or Center Heavy.",
+      "headline": "MANAGE YOUR STUDIO LIKE A PRO",
+      "subheadline": "The all-in-one platform for workouts, diet plans, and membership management. Built for high-performance fitness businesses.",
+      "cta": "START FREE TRIAL",
+      "visual": "A tilted, floating dashboard card showing a 'Revenue Graph' or 'Member Activity' chart using Recharts."
+    },
+    "features": {
+      "layout": "Bento Grid (Asymmetric)",
+      "items": [
+        {
+          "title": "Workout Tracking",
+          "desc": "Build custom plans. Track PRs.",
+          "col_span": "col-span-8",
+          "visual": "Interactive graph or image of trainer"
+        },
+        {
+          "title": "Diet & Nutrition",
+          "desc": "Macro counting made simple.",
+          "col_span": "col-span-4",
+          "visual": "Image of meal prep"
+        },
+        {
+          "title": "Class Scheduling",
+          "desc": "Fill your classes. Zero conflicts.",
+          "col_span": "col-span-4",
+          "visual": "Calendar UI Component"
+        },
+        {
+          "title": "Member Management",
+          "desc": "Automated billing and retention.",
+          "col_span": "col-span-8",
+          "visual": "Member list UI with status tags"
+        }
+      ]
+    },
+    "pricing": {
+      "layout": "Three vertical cards. Center card 'Pro' highlighted with Neon Blue border and glow.",
+      "tiers": ["Starter", "Pro (Recommended)", "Enterprise"]
+    },
+    "testimonials": {
+      "layout": "Infinite Marquee or Grid.",
+      "content": "Real gym owners praising the efficiency."
+    },
+    "contact": {
+      "layout": "Minimal form on the left, office/gym location map or moody image on the right."
+    }
+  },
+  "installation_steps": [
+    "npm install framer-motion clsx tailwind-merge lucide-react recharts"
+  ],
+  "universal_guidelines": [
+    "Do not use gradients for text.",
+    "Do not use rounded-xl or rounded-2xl. Stick to rounded-sm or rounded-none for this brand.",
+    "Use data-testid on all buttons and inputs.",
+    "Ensure high contrast for text (White on Black).",
+    "Use 'framer-motion' for simple entrance animations (fade-up)."
+  ]
+}
