@@ -6,7 +6,7 @@ const Features = () => {
   const features = [
   {
     title: "Smart Workout Tracking",
-    desc: 'Build custom workout plans. Track PRs and progress over time. Help your members achieve their fitness goals faster.',
+    desc: "Automatically generate personalized workout schedules based on member preferences. Reschedule missed sessions based on attendance, ensure weekly workout completion, and provide a clear view of daily schedules, attended sessions, and missed classes.",
     icon: Dumbbell,
     images: [
     'https://customer-assets.emergentagent.com/job_workout-track-9/artifacts/u42git4g_image.png',
