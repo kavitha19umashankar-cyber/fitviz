@@ -43,15 +43,15 @@ const Footer = () => {
     <footer className="bg-[#0D0D0F] border-t border-[#24242A] pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-8 mb-12">
+        <div className="flex flex-col md:flex-row justify-between gap-8 mb-12">
           {/* Brand Column */}
-          <div className="col-span-2">
+          <div className="max-w-xs">
             <a href="#" className="inline-block mb-4" data-testid="footer-logo">
               <span className="font-bold text-2xl tracking-tight text-white">
                 Fit<span className="text-[#C8FF00]">Viz</span>
               </span>
             </a>
-            <p className="text-sm text-gray-500 mb-6 max-w-xs">
+            <p className="text-sm text-gray-500 mb-6">
               Your personal fitness companion. Track workouts, diet, and progress. Built for fitness studios who demand excellence.
             </p>
             {/* Social Links */}
@@ -70,31 +70,33 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Links Columns */}
-          <div>
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">Product</h4>
-            <ul className="space-y-3">
-              {footerLinks.product.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Links Columns — pushed to the right */}
+          <div className="flex gap-12">
+            <div>
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">Product</h4>
+              <ul className="space-y-3">
+                {footerLinks.product.map((link) => (
+                  <li key={link.label}>
+                    <a href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors">
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          <div>
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">Legal</h4>
-            <ul className="space-y-3">
-              {footerLinks.legal.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <div>
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">Legal</h4>
+              <ul className="space-y-3">
+                {footerLinks.legal.map((link) => (
+                  <li key={link.label}>
+                    <a href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors">
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
