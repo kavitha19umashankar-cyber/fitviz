@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Dumbbell, Apple, CalendarDays, Users, TrendingUp, Shield } from 'lucide-react';
+import { Dumbbell, Apple, CalendarDays, Users, TrendingUp, Shield, Bot, MessageCircle } from 'lucide-react';
 
 const Features = () => {
   const features = [
@@ -39,6 +39,21 @@ const Features = () => {
       colSpan: 'col-span-12 lg:col-span-8',
       size: 'large',
       showMembers: true,
+    },
+    {
+      title: 'AI Call Automation',
+      desc: 'Automatically call members who miss workouts and understand why they\'re not attending. AI handles follow-ups, captures responses, and provides clear call summaries in your dashboard so you can improve retention and re-engage members effortlessly.',
+      icon: Bot,
+      colSpan: 'col-span-12 lg:col-span-6',
+      size: 'medium',
+    },
+    {
+      title: 'WhatsApp Integration',
+      desc: 'Send automated WhatsApp messages to members for workout schedules, reminders, announcements, and special offers. Keep your members engaged with timely updates on the platform they use every day.',
+      icon: MessageCircle,
+      colSpan: 'col-span-12 lg:col-span-6',
+      size: 'medium',
+      isWhatsApp: true,
     },
   ];
 
@@ -102,8 +117,8 @@ const Features = () => {
                 <div className={feature.size === 'large' ? 'flex flex-col md:flex-row gap-6' : ''}>
                   {/* Text Content */}
                   <div className={feature.size === 'large' ? 'flex-1' : ''}>
-                    <div className="w-12 h-12 bg-[#C8FF00]/10 border border-[#C8FF00]/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#C8FF00]/20 transition-colors">
-                      <feature.icon className="w-6 h-6 text-[#C8FF00]" />
+                    <div className={`w-12 h-12 ${feature.isWhatsApp ? 'bg-[#25D366]/10 border-[#25D366]/20' : 'bg-[#C8FF00]/10 border-[#C8FF00]/20'} border rounded-lg flex items-center justify-center mb-4 group-hover:${feature.isWhatsApp ? 'bg-[#25D366]/20' : 'bg-[#C8FF00]/20'} transition-colors`}>
+                      <feature.icon className={`w-6 h-6 ${feature.isWhatsApp ? 'text-[#25D366]' : 'text-[#C8FF00]'}`} />
                     </div>
                     <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
                       {feature.title}
