@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -67,7 +67,19 @@ const Navbar = () => {
         </div>
 
         {/* CTA Button */}
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center gap-4">
+          {/* Phone Number */}
+          <a 
+            href="tel:+919600029629"
+            className="flex items-center gap-2 text-gray-300 hover:text-[#C8FF00] transition-colors group"
+            data-testid="nav-phone"
+          >
+            <div className="w-8 h-8 bg-[#C8FF00]/10 border border-[#C8FF00]/30 rounded-lg flex items-center justify-center group-hover:bg-[#C8FF00]/20 transition-colors">
+              <Phone className="w-4 h-4 text-[#C8FF00]" />
+            </div>
+            <span className="text-sm font-medium">+91 96000 29629</span>
+          </a>
+          
           <button
             onClick={() => scrollToSection('#contact')}
             className="bg-gradient-to-r from-[#C8FF00] to-[#a3d300] text-[#0D0D0F] font-semibold px-6 py-2.5 rounded-lg hover:opacity-90 transition-all active:scale-95"
