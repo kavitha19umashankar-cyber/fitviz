@@ -97,10 +97,10 @@ const Features = () => {
 
   // Diet plan data based on FitViz Diet Plan
   const dietPlanData = [
-  { meal: 'Breakfast', title: 'Chicken Sausage + Eggs + Fruit', items: 'Sausages, egg, orange' },
-  { meal: 'Lunch', title: 'Chicken Salad Bowl', items: 'Chicken, quinoa, greens' },
-  { meal: 'Dinner', title: 'Fish Tikka + Roti + Veg', items: 'Grilled fish, roti, veg' },
-  { meal: 'Snack', title: 'Mixed Nuts + Raisins', items: 'Nuts, raisins' }];
+  { meal: 'Breakfast', title: 'Idli + Sambar + Egg', items: 'Idli, sambar, boiled egg' },
+  { meal: 'Lunch', title: 'Chicken Rice Bowl', items: 'Chicken, brown rice, greens' },
+  { meal: 'Dinner', title: 'Fish Curry + Roti + Veg', items: 'Fish curry, roti, beans' },
+  { meal: 'Snack', title: 'Sundal + Buttermilk', items: 'Chana sundal, mor' }];
 
   // AI Call data
   const aiCallData = [
@@ -299,11 +299,11 @@ const Features = () => {
                         {/* Members List */}
                         <div className="divide-y divide-[#303038]">
                           {[
-                      { name: 'Sarah Johnson', plan: 'Pro', status: 'active' },
-                      { name: 'Mike Williams', plan: 'Basic', status: 'active' },
-                      { name: 'Emily Chen', plan: 'Pro', status: 'pending' },
-                      { name: 'Raj Patel', plan: 'Pro', status: 'active' },
-                      { name: 'Priya Sharma', plan: 'Basic', status: 'topup' }].
+                      { name: 'Santhosh Kumar', plan: 'Pro', status: 'active' },
+                      { name: 'Lakshmi Narayanan', plan: 'Basic', status: 'active' },
+                      { name: 'Meenakshi Sundaram', plan: 'Pro', status: 'pending' },
+                      { name: 'Rajesh Kannan', plan: 'Pro', status: 'active' },
+                      { name: 'Priya Dharshini', plan: 'Basic', status: 'topup' }].
                       map((member, i) =>
                       <div key={i} className="px-4 py-3 flex items-center justify-between">
                               <div className="flex items-center gap-3">

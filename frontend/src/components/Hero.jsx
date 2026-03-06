@@ -139,10 +139,10 @@ const Hero = () => {
 
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[#C8FF00] to-[#a3d300] flex items-center justify-center text-[#0D0D0F] font-bold">
-                    JD
+                    VK
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-white">New Member</p>
+                    <p className="text-sm font-medium text-white">Venkat Kumar</p>
                     <p className="text-xs text-[#4ade80]">Just signed up</p>
                   </div>
                 </div>
