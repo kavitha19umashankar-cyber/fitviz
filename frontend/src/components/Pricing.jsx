@@ -9,12 +9,13 @@ const Pricing = () => {
     {
       name: 'Starter',
       desc: 'Perfect for small studios just getting started.',
-      price: isAnnual ? 2499 : 2999,
+      price: isAnnual ? 599 : 699,
       features: [
-        'Up to 50 members',
-        'Basic workout tracking',
-        'Class scheduling',
-        'Email support',
+        'Up to 200 members',
+        'Workout tracking',
+        'Attendance tracking',
+        'Customized scheduling',
+        'Single Gym Management',
         'Mobile app access',
       ],
       cta: 'Start Free Trial',
