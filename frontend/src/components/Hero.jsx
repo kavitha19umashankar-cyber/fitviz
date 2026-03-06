@@ -13,7 +13,7 @@ const Hero = () => {
   const stats = [
   { label: 'Active Studios', value: "50+", icon: Users },
   { label: 'Members Managed', value: "10K+", icon: TrendingUp },
-  { label: 'Classes Scheduled', value: '1M+', icon: Calendar }];
+  { label: 'Classes Scheduled', value: "1M+", icon: Calendar }];
 
 
   return (
