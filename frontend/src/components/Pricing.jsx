@@ -11,7 +11,8 @@ const Pricing = () => {
       desc: 'Perfect for small studios just getting started.',
       price: isAnnual ? 599 : 699,
       features: [
-        'Up to 200 members',
+        'Unlimited members',
+        '3 staff accounts',
         'Workout tracking',
         'Attendance tracking',
         'Customized scheduling',
@@ -26,7 +27,8 @@ const Pricing = () => {
       desc: 'For growing studios that need more power.',
       price: isAnnual ? 999 : 1099,
       features: [
-        'Up to 1000 members',
+        'Unlimited members',
+        '10 staff accounts',
         'Advanced workout & diet plans',
         'Attendance tracking',
         'Customized scheduling',
