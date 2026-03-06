@@ -8,9 +8,13 @@ const Features = () => {
       title: 'Workout Tracking',
       desc: 'Build custom workout plans. Track PRs and progress over time. Help your members achieve their fitness goals faster.',
       icon: Dumbbell,
-      image: 'https://images.unsplash.com/photo-1758875569414-120ebc62ada3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHw0fHxmaXRuZXNzJTIwdHJhaW5lciUyMHVzaW5nJTIwZGlnaXRhbCUyMHRhYmxldCUyMGluJTIwZ3ltfGVufDB8fHx8MTc3MjgwMjQ2MXww&ixlib=rb-4.1.0&q=85',
+      images: [
+        'https://customer-assets.emergentagent.com/job_workout-track-9/artifacts/u42git4g_image.png',
+        'https://customer-assets.emergentagent.com/job_workout-track-9/artifacts/zopmkmxr_image.png'
+      ],
       colSpan: 'col-span-12 lg:col-span-8',
       size: 'large',
+      showAppScreenshots: true,
     },
     {
       title: 'Diet & Nutrition',
@@ -109,8 +113,25 @@ const Features = () => {
                     </p>
                   </div>
 
-                  {/* Visual Content */}
-                  {feature.image && (
+                  {/* Visual Content - App Screenshots */}
+                  {feature.showAppScreenshots && feature.images && (
+                    <div className="flex-1 mt-6 md:mt-0">
+                      <div className="grid grid-cols-2 gap-3">
+                        {feature.images.map((img, idx) => (
+                          <div key={idx} className="relative overflow-hidden rounded-lg border border-[#303038] group-hover:border-[#C8FF00]/30 transition-colors">
+                            <img
+                              src={img}
+                              alt={`${feature.title} screenshot ${idx + 1}`}
+                              className="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Visual Content - Single Image */}
+                  {feature.image && !feature.showAppScreenshots && (
                     <div className={`${feature.size === 'large' ? 'flex-1' : 'mt-6'} relative overflow-hidden rounded-lg`}>
                       <img
                         src={feature.image}
