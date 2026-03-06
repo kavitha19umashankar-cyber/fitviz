@@ -43,7 +43,7 @@ const Footer = () => {
     <footer className="bg-[#0D0D0F] border-t border-[#24242A] pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Main Footer Content */}
-        <div className="flex flex-col md:flex-row justify-between gap-8 mb-12">
+        <div className="flex flex-col md:flex-row gap-16 mb-12">
           {/* Brand Column */}
           <div className="max-w-xs">
             <a href="#" className="inline-block mb-4" data-testid="footer-logo">
