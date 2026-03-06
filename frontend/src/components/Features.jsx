@@ -446,13 +446,88 @@ const Features = () => {
               </div>
             </div>
           </div>
-          <div className="bg-[#16161A] border border-[#24242A] rounded-xl p-6 flex items-center gap-4 hover:border-[#C8FF00]/30 transition-colors">
-            <div className="w-12 h-12 bg-[#C8FF00]/10 border border-[#C8FF00]/20 rounded-lg flex items-center justify-center">
-              <Shield className="w-6 h-6 text-[#C8FF00]" />
+          <div className="bg-[#16161A] border border-[#24242A] rounded-xl p-4 hover:border-[#C8FF00]/30 transition-colors">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 bg-[#C8FF00]/10 border border-[#C8FF00]/20 rounded-lg flex items-center justify-center">
+                <Shield className="w-5 h-5 text-[#C8FF00]" />
+              </div>
+              <div>
+                <h4 className="text-base font-bold text-white">Secure & Reliable</h4>
+                <p className="text-xs text-gray-400">Enterprise-grade security with 99.9% uptime</p>
+              </div>
             </div>
-            <div>
-              <h4 className="text-lg font-bold text-white">Secure & Reliable</h4>
-              <p className="text-sm text-gray-400">Enterprise-grade security with 99.9% uptime guarantee.</p>
+            {/* Uptime Chart */}
+            <div className="bg-[#1C1C21] rounded-lg p-3 border border-[#303038]">
+              <div className="flex items-center justify-between mb-2">
+                <p className="text-[9px] text-gray-500 uppercase">Uptime - Last 12 Months</p>
+                <p className="text-xs font-bold text-[#C8FF00]">Avg: 99.2%</p>
+              </div>
+              {/* Y-axis labels and chart */}
+              <div className="flex gap-2">
+                <div className="flex flex-col justify-between text-[8px] text-gray-500 py-1">
+                  <span>100%</span>
+                  <span>98%</span>
+                  <span>96%</span>
+                </div>
+                <div className="flex-1 relative h-16">
+                  {/* Grid lines */}
+                  <div className="absolute inset-0 flex flex-col justify-between">
+                    <div className="border-t border-dashed border-[#303038]"></div>
+                    <div className="border-t border-dashed border-[#303038]"></div>
+                    <div className="border-t border-dashed border-[#303038]"></div>
+                  </div>
+                  {/* Line chart using SVG */}
+                  <svg className="w-full h-full" viewBox="0 0 120 40" preserveAspectRatio="none">
+                    {/* Gradient fill under line */}
+                    <defs>
+                      <linearGradient id="uptimeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stopColor="#C8FF00" stopOpacity="0.3"/>
+                        <stop offset="100%" stopColor="#C8FF00" stopOpacity="0"/>
+                      </linearGradient>
+                    </defs>
+                    {/* Area fill */}
+                    <path 
+                      d="M0,5 L10,3 L20,5 L30,4 L40,8 L50,5 L60,3 L70,5 L80,15 L90,5 L100,3 L110,5 L120,4 L120,40 L0,40 Z" 
+                      fill="url(#uptimeGradient)"
+                    />
+                    {/* Line */}
+                    <path 
+                      d="M0,5 L10,3 L20,5 L30,4 L40,8 L50,5 L60,3 L70,5 L80,15 L90,5 L100,3 L110,5 L120,4" 
+                      fill="none" 
+                      stroke="#C8FF00" 
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    {/* Data points */}
+                    <circle cx="0" cy="5" r="2" fill="#C8FF00"/>
+                    <circle cx="30" cy="4" r="2" fill="#C8FF00"/>
+                    <circle cx="60" cy="3" r="2" fill="#C8FF00"/>
+                    <circle cx="80" cy="15" r="2.5" fill="#facc15"/>
+                    <circle cx="120" cy="4" r="2" fill="#C8FF00"/>
+                  </svg>
+                </div>
+              </div>
+              {/* X-axis labels */}
+              <div className="flex justify-between mt-1 pl-6 text-[7px] text-gray-500">
+                <span>Apr</span>
+                <span>Jun</span>
+                <span>Aug</span>
+                <span>Oct</span>
+                <span>Dec</span>
+                <span>Mar</span>
+              </div>
+              {/* Legend */}
+              <div className="flex items-center gap-3 mt-2 pt-2 border-t border-[#303038]">
+                <div className="flex items-center gap-1">
+                  <div className="w-2 h-2 rounded-full bg-[#C8FF00]"></div>
+                  <span className="text-[8px] text-gray-400">99%+ uptime</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <div className="w-2 h-2 rounded-full bg-[#facc15]"></div>
+                  <span className="text-[8px] text-gray-400">97% (maintenance)</span>
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
