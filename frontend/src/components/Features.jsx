@@ -6,7 +6,7 @@ const Features = () => {
   const features = [
   {
     title: "Smart Workout Tracking",
-    desc: "Automatically generate personalized workout schedules based on each member\u2019s goals and preferences. The system intelligently adjusts and reschedules missed sessions based on attendance, ensuring members complete their planned weekly workouts. Trainers and members get a clear overview of daily schedules, attended sessions, and missed classes in one place. This smart tracking keeps members accountable, improves workout consistency, and helps fitness studios monitor engagement while guiding members toward better results and long-term fitness progress.",
+    desc: "Automatically generate personalized workout schedules based on each member\u2019s goals and preferences. Missed sessions are intelligently rescheduled based on attendance, ensuring weekly workouts are completed while providing a clear view of daily schedules, attended sessions, and missed classes.",
     icon: Dumbbell,
     colSpan: 'col-span-12 lg:col-span-8',
     size: 'large',
