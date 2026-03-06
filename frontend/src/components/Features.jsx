@@ -50,7 +50,8 @@ const Features = () => {
     icon: MessageCircle,
     colSpan: 'col-span-12 lg:col-span-6',
     size: 'medium',
-    isWhatsApp: true
+    isWhatsApp: true,
+    showWhatsAppPhone: true
   }];
 
 
@@ -343,6 +344,66 @@ const Features = () => {
                             </div>
                           </div>
                         ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* WhatsApp Phone Visual */}
+                  {feature.showWhatsAppPhone && (
+                    <div className="mt-4 flex justify-center">
+                      {/* Phone Frame */}
+                      <div className="w-full max-w-[280px] bg-[#0B141A] rounded-2xl border-4 border-[#303038] overflow-hidden shadow-xl">
+                        {/* WhatsApp Header */}
+                        <div className="bg-[#1F2C34] px-3 py-2 flex items-center gap-2">
+                          <div className="w-8 h-8 rounded-full bg-[#25D366] flex items-center justify-center">
+                            <span className="text-white text-xs font-bold">FV</span>
+                          </div>
+                          <div className="flex-1">
+                            <p className="text-white text-sm font-medium">FitViz Studio</p>
+                            <p className="text-[10px] text-gray-400">online</p>
+                          </div>
+                        </div>
+                        
+                        {/* Chat Messages */}
+                        <div className="p-3 space-y-2 min-h-[200px] bg-[#0B141A]" style={{backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%231F2C34" fill-opacity="0.3"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")'}}>
+                          
+                          {/* Announcement Message */}
+                          <div className="flex justify-start">
+                            <div className="bg-[#1F2C34] rounded-lg rounded-tl-none px-3 py-2 max-w-[85%] shadow">
+                              <p className="text-[10px] text-[#25D366] font-semibold mb-1">📢 Announcement</p>
+                              <p className="text-xs text-white leading-relaxed">Studio closed on Sunday for maintenance. See you Monday!</p>
+                              <p className="text-[9px] text-gray-500 text-right mt-1">10:30 AM</p>
+                            </div>
+                          </div>
+                          
+                          {/* Offer Message */}
+                          <div className="flex justify-start">
+                            <div className="bg-[#1F2C34] rounded-lg rounded-tl-none px-3 py-2 max-w-[85%] shadow">
+                              <p className="text-[10px] text-[#facc15] font-semibold mb-1">🎉 Special Offer</p>
+                              <p className="text-xs text-white leading-relaxed">Refer a friend & get 20% off next month! Use code: FITFRIEND</p>
+                              <p className="text-[9px] text-gray-500 text-right mt-1">11:15 AM</p>
+                            </div>
+                          </div>
+                          
+                          {/* Workout Reminder */}
+                          <div className="flex justify-start">
+                            <div className="bg-[#1F2C34] rounded-lg rounded-tl-none px-3 py-2 max-w-[85%] shadow">
+                              <p className="text-[10px] text-[#C8FF00] font-semibold mb-1">💪 Today's Workout</p>
+                              <p className="text-xs text-white leading-relaxed">Full Body + CARDIO at 6:00 PM. Don't forget your towel!</p>
+                              <p className="text-[9px] text-gray-500 text-right mt-1">2:00 PM ✓✓</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        {/* Input Bar */}
+                        <div className="bg-[#1F2C34] px-2 py-2 flex items-center gap-2">
+                          <div className="flex-1 bg-[#2A3942] rounded-full px-3 py-1.5">
+                            <p className="text-xs text-gray-500">Type a message</p>
+                          </div>
+                          <div className="w-8 h-8 rounded-full bg-[#25D366] flex items-center justify-center">
+                            <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   )}
