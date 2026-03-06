@@ -41,7 +41,8 @@ const Features = () => {
     desc: "Automatically call members who miss workouts and understand why they're not attending. AI handles follow-ups, captures responses, and provides clear call summaries in your dashboard so you can improve retention and re-engage members effortlessly.",
     icon: Bot,
     colSpan: 'col-span-12 lg:col-span-6',
-    size: 'medium'
+    size: 'medium',
+    showAICallTable: true
   },
   {
     title: 'WhatsApp Integration',
@@ -91,6 +92,12 @@ const Features = () => {
   { meal: 'Lunch', title: 'Chicken Salad Bowl', items: 'Chicken, quinoa, greens' },
   { meal: 'Dinner', title: 'Fish Tikka + Roti + Veg', items: 'Grilled fish, roti, veg' },
   { meal: 'Snack', title: 'Mixed Nuts + Raisins', items: 'Nuts, raisins' }];
+
+  // AI Call data
+  const aiCallData = [
+    { name: 'Shamitha', daysAbsent: '8d', status: 'Completed', summary: 'Personal issues, feeling unwell. Will return next week.' },
+    { name: 'Sowmiya', daysAbsent: '14d', status: 'Completed', summary: 'Work travel. AI scheduled return session for Monday.' }
+  ];
 
 
   return (
@@ -308,6 +315,37 @@ const Features = () => {
                       </div>
                     </div>
                 }
+
+                  {/* AI Call Table Visual */}
+                  {feature.showAICallTable && (
+                    <div className="mt-4">
+                      <div className="bg-[#1C1C21] rounded-lg border border-[#303038] overflow-hidden">
+                        {/* Header */}
+                        <div className="grid grid-cols-3 bg-[#24242A]/50 border-b border-[#303038]">
+                          <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">Member</div>
+                          <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider text-center">Status</div>
+                          <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">AI Summary</div>
+                        </div>
+                        {/* Rows */}
+                        {aiCallData.map((call, i) => (
+                          <div key={i} className="grid grid-cols-3 border-b border-[#303038] last:border-b-0 hover:bg-[#24242A]/30 transition-colors">
+                            <div className="px-3 py-2.5 flex items-center gap-2">
+                              <span className="text-sm text-white font-medium">{call.name}</span>
+                              <span className={`text-xs px-1.5 py-0.5 rounded ${call.daysAbsent === '14d' ? 'bg-red-900/50 text-red-400' : 'bg-yellow-900/50 text-yellow-400'}`}>
+                                {call.daysAbsent}
+                              </span>
+                            </div>
+                            <div className="px-3 py-2.5 flex items-center justify-center">
+                              <span className="badge badge-green text-xs">{call.status}</span>
+                            </div>
+                            <div className="px-3 py-2.5">
+                              <p className="text-xs text-gray-400 leading-relaxed">{call.summary}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </motion.div>
