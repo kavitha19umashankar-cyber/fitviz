@@ -71,7 +71,7 @@ const Footer = () => {
           </div>
 
           {/* Links Columns — pushed to the right */}
-          <div className="flex gap-6">
+          <div className="flex gap-12">
             <div>
               <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">Product</h4>
               <ul className="space-y-3">
