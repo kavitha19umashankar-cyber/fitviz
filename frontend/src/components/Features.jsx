@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Dumbbell, Apple, CalendarDays, Users, TrendingUp, Shield, Bot, MessageCircle } from 'lucide-react';
+import { Dumbbell, Apple, CalendarDays, Users, TrendingUp, Shield, Bot, MessageCircle, Building2 } from 'lucide-react';
 
 const Features = () => {
   const features = [
@@ -52,6 +52,14 @@ const Features = () => {
     size: 'medium',
     isWhatsApp: true,
     showWhatsAppPhone: true
+  },
+  {
+    title: 'Multi-Gym Management',
+    desc: 'Manage multiple gym locations from a single dashboard. Track members, revenue, attendance, and staff across all branches. Perfect for gym chains operating in different areas with centralized control and location-wise insights.',
+    icon: Building2,
+    colSpan: 'col-span-12',
+    size: 'large',
+    showMultiGym: true
   }];
 
 
@@ -389,6 +397,62 @@ const Features = () => {
                       </div>
                     </div>
                 }
+
+                  {/* Multi-Gym Visual */}
+                  {feature.showMultiGym && (
+                    <div className="flex-1 mt-6 md:mt-0">
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                        {/* Location Cards */}
+                        {[
+                          { name: 'Downtown Branch', members: 534, revenue: '₹2.8L', attendance: 89, color: '#C8FF00' },
+                          { name: 'Whitefield Branch', members: 421, revenue: '₹2.1L', attendance: 92, color: '#4ade80' },
+                          { name: 'Indiranagar Branch', members: 690, revenue: '₹3.5L', attendance: 87, color: '#60a5fa' }
+                        ].map((location, i) => (
+                          <div key={i} className="bg-[#1C1C21] rounded-lg border border-[#303038] p-3 hover:border-opacity-50 transition-colors" style={{borderColor: location.color, borderOpacity: 0.3}}>
+                            <div className="flex items-center gap-2 mb-3">
+                              <div className="w-2 h-2 rounded-full" style={{backgroundColor: location.color}}></div>
+                              <p className="text-xs font-semibold text-white">{location.name}</p>
+                            </div>
+                            <div className="space-y-2">
+                              <div className="flex justify-between items-center">
+                                <span className="text-[10px] text-gray-500">Members</span>
+                                <span className="text-sm font-bold text-white">{location.members}</span>
+                              </div>
+                              <div className="flex justify-between items-center">
+                                <span className="text-[10px] text-gray-500">Revenue</span>
+                                <span className="text-sm font-bold" style={{color: location.color}}>{location.revenue}</span>
+                              </div>
+                              <div className="flex justify-between items-center">
+                                <span className="text-[10px] text-gray-500">Attendance</span>
+                                <span className="text-sm font-bold text-white">{location.attendance}%</span>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                      {/* Summary Bar */}
+                      <div className="mt-3 bg-[#1C1C21] rounded-lg border border-[#303038] p-3 flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <Building2 className="w-4 h-4 text-[#C8FF00]" />
+                          <span className="text-xs text-gray-400">Total across 3 locations</span>
+                        </div>
+                        <div className="flex gap-4">
+                          <div className="text-center">
+                            <p className="text-sm font-bold text-white">1,645</p>
+                            <p className="text-[9px] text-gray-500">Members</p>
+                          </div>
+                          <div className="text-center">
+                            <p className="text-sm font-bold text-[#C8FF00]">₹8.4L</p>
+                            <p className="text-[9px] text-gray-500">Revenue</p>
+                          </div>
+                          <div className="text-center">
+                            <p className="text-sm font-bold text-white">89%</p>
+                            <p className="text-[9px] text-gray-500">Avg Attendance</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </motion.div>
