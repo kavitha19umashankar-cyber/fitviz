@@ -96,9 +96,9 @@ const Features = () => {
 
   // AI Call data
   const aiCallData = [
-    { name: 'Shamitha', daysAbsent: '8d', status: 'Completed', summary: 'Personal issues, feeling unwell. Will return next week.' },
-    { name: 'Sowmiya', daysAbsent: '14d', status: 'Completed', summary: 'Work travel. AI scheduled return session for Monday.' }
-  ];
+  { name: 'Shamitha', daysAbsent: '8d', status: 'Completed', summary: 'Personal issues, feeling unwell. Will return next week.' },
+  { name: 'Sowmiya', daysAbsent: '14d', status: 'Completed', summary: 'Work travel. AI scheduled return session for Monday.' }];
+
 
 
   return (
@@ -318,8 +318,8 @@ const Features = () => {
                 }
 
                   {/* AI Call Table Visual */}
-                  {feature.showAICallTable && (
-                    <div className="mt-4">
+                  {feature.showAICallTable &&
+                <div className="mt-4">
                       <div className="bg-[#1C1C21] rounded-lg border border-[#303038] overflow-hidden">
                         {/* Header */}
                         <div className="grid grid-cols-3 bg-[#24242A]/50 border-b border-[#303038]">
@@ -328,8 +328,8 @@ const Features = () => {
                           <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">AI Summary</div>
                         </div>
                         {/* Rows */}
-                        {aiCallData.map((call, i) => (
-                          <div key={i} className="grid grid-cols-3 border-b border-[#303038] last:border-b-0 hover:bg-[#24242A]/30 transition-colors">
+                        {aiCallData.map((call, i) =>
+                    <div key={i} className="grid grid-cols-3 border-b border-[#303038] last:border-b-0 hover:bg-[#24242A]/30 transition-colors">
                             <div className="px-3 py-2.5 flex items-center gap-2">
                               <span className="text-sm text-white font-medium">{call.name}</span>
                               <span className={`text-xs px-1.5 py-0.5 rounded ${call.daysAbsent === '14d' ? 'bg-red-900/50 text-red-400' : 'bg-yellow-900/50 text-yellow-400'}`}>
@@ -343,14 +343,14 @@ const Features = () => {
                               <p className="text-xs text-gray-400 leading-relaxed">{call.summary}</p>
                             </div>
                           </div>
-                        ))}
+                    )}
                       </div>
                     </div>
-                  )}
+                }
 
                   {/* WhatsApp Phone Visual */}
-                  {feature.showWhatsAppPhone && (
-                    <div className="mt-4">
+                  {feature.showWhatsAppPhone &&
+                <div className="mt-4">
                       {/* Phone Frame */}
                       <div className="bg-[#0B141A] rounded-xl border-2 border-[#303038] overflow-hidden shadow-lg">
                         {/* WhatsApp Header */}
@@ -388,7 +388,7 @@ const Features = () => {
                         </div>
                       </div>
                     </div>
-                  )}
+                }
                 </div>
               </div>
             </motion.div>
@@ -440,9 +440,9 @@ const Features = () => {
             <div className="bg-[#1C1C21] rounded-lg p-2 border border-[#303038]">
               <p className="text-[9px] text-gray-500 uppercase mb-2">Daily Attendance</p>
               <div className="flex items-end gap-1 h-8">
-                {[30, 30, 60, 60, 100, 100, 100, 30, 30].map((h, i) => (
-                  <div key={i} className="flex-1 bg-[#C8FF00] rounded-t" style={{height: `${h}%`}} />
-                ))}
+                {[30, 30, 60, 60, 100, 100, 100, 30, 30].map((h, i) =>
+                <div key={i} className="flex-1 bg-[#C8FF00] rounded-t" style={{ height: `${h}%` }} />
+                )}
               </div>
             </div>
           </div>
@@ -453,7 +453,7 @@ const Features = () => {
               </div>
               <div>
                 <h4 className="text-base font-bold text-white">Secure & Reliable</h4>
-                <p className="text-xs text-gray-400">Enterprise-grade security with 99.9% uptime</p>
+                <p className="text-xs text-gray-400">Enterprise-grade security with 99.2% uptime</p>
               </div>
             </div>
             {/* Uptime Chart */}
@@ -481,30 +481,30 @@ const Features = () => {
                     {/* Gradient fill under line */}
                     <defs>
                       <linearGradient id="uptimeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stopColor="#C8FF00" stopOpacity="0.3"/>
-                        <stop offset="100%" stopColor="#C8FF00" stopOpacity="0"/>
+                        <stop offset="0%" stopColor="#C8FF00" stopOpacity="0.3" />
+                        <stop offset="100%" stopColor="#C8FF00" stopOpacity="0" />
                       </linearGradient>
                     </defs>
                     {/* Area fill */}
-                    <path 
-                      d="M0,5 L10,3 L20,5 L30,4 L40,8 L50,5 L60,3 L70,5 L80,15 L90,5 L100,3 L110,5 L120,4 L120,40 L0,40 Z" 
-                      fill="url(#uptimeGradient)"
-                    />
+                    <path
+                      d="M0,5 L10,3 L20,5 L30,4 L40,8 L50,5 L60,3 L70,5 L80,15 L90,5 L100,3 L110,5 L120,4 L120,40 L0,40 Z"
+                      fill="url(#uptimeGradient)" />
+
                     {/* Line */}
-                    <path 
-                      d="M0,5 L10,3 L20,5 L30,4 L40,8 L50,5 L60,3 L70,5 L80,15 L90,5 L100,3 L110,5 L120,4" 
-                      fill="none" 
-                      stroke="#C8FF00" 
+                    <path
+                      d="M0,5 L10,3 L20,5 L30,4 L40,8 L50,5 L60,3 L70,5 L80,15 L90,5 L100,3 L110,5 L120,4"
+                      fill="none"
+                      stroke="#C8FF00"
                       strokeWidth="1.5"
                       strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
+                      strokeLinejoin="round" />
+
                     {/* Data points */}
-                    <circle cx="0" cy="5" r="2" fill="#C8FF00"/>
-                    <circle cx="30" cy="4" r="2" fill="#C8FF00"/>
-                    <circle cx="60" cy="3" r="2" fill="#C8FF00"/>
-                    <circle cx="80" cy="15" r="2.5" fill="#facc15"/>
-                    <circle cx="120" cy="4" r="2" fill="#C8FF00"/>
+                    <circle cx="0" cy="5" r="2" fill="#C8FF00" />
+                    <circle cx="30" cy="4" r="2" fill="#C8FF00" />
+                    <circle cx="60" cy="3" r="2" fill="#C8FF00" />
+                    <circle cx="80" cy="15" r="2.5" fill="#facc15" />
+                    <circle cx="120" cy="4" r="2" fill="#C8FF00" />
                   </svg>
                 </div>
               </div>
