@@ -115,8 +115,8 @@ const Features = () => {
 
                   {/* Visual Content - App Screenshots */}
                   {feature.showAppScreenshots && feature.images && (
-                    <div className="flex-1 mt-6 md:mt-0">
-                      <div className="grid grid-cols-2 gap-3">
+                    <div className={`${feature.size === 'large' ? 'flex-1' : 'mt-6'} relative overflow-hidden rounded-lg`}>
+                      <div className="space-y-3">
                         {feature.images.map((img, idx) => (
                           <div key={idx} className="relative overflow-hidden rounded-lg border border-[#303038] group-hover:border-[#C8FF00]/30 transition-colors">
                             <img
