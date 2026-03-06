@@ -30,7 +30,7 @@ const Features = () => {
   },
   {
     title: 'Member Management',
-    desc: 'Automated billing, attendance tracking, and retention analytics. Know your members better than ever.',
+    desc: "Easily manage memberships, subscriptions, and top-ups from one dashboard. Track active plans, switch members between offers, and receive automatic notifications for upcoming expiries. Stay organized, prevent revenue loss, and ensure members renew on time with smart membership management.",
     icon: Users,
     colSpan: 'col-span-12 lg:col-span-8',
     size: 'large',
