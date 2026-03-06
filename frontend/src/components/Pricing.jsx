@@ -9,7 +9,7 @@ const Pricing = () => {
     {
       name: 'Starter',
       desc: 'Perfect for small studios just getting started.',
-      price: isAnnual ? 29 : 39,
+      price: isAnnual ? 2499 : 2999,
       features: [
         'Up to 50 members',
         'Basic workout tracking',
@@ -23,7 +23,7 @@ const Pricing = () => {
     {
       name: 'Pro',
       desc: 'For growing studios that need more power.',
-      price: isAnnual ? 79 : 99,
+      price: isAnnual ? 6499 : 7999,
       features: [
         'Up to 500 members',
         'Advanced workout & diet plans',
@@ -134,7 +134,7 @@ const Pricing = () => {
                     {typeof plan.price === 'number' ? (
                       <div className="flex items-baseline gap-1">
                         <span className="text-5xl font-bold text-white">
-                          ${plan.price}
+                          ₹{plan.price.toLocaleString('en-IN')}
                         </span>
                         <span className="text-gray-500 text-sm">/month</span>
                       </div>

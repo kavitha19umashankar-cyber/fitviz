@@ -116,7 +116,7 @@ const Hero = () => {
                 
                 <div className="grid grid-cols-3 gap-4 text-center">
                   <div>
-                    <p className="text-2xl font-bold text-white">$47.2K</p>
+                    <p className="text-2xl font-bold text-white">₹39.2L</p>
                     <p className="text-xs text-gray-500 uppercase tracking-wider">Revenue</p>
                   </div>
                   <div>
