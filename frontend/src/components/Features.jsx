@@ -16,9 +16,9 @@ const Features = () => {
       title: 'Diet & Nutrition',
       desc: 'Macro counting made simple. Create personalized meal plans for every member.',
       icon: Apple,
-      image: 'https://images.pexels.com/photos/30635719/pexels-photo-30635719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       colSpan: 'col-span-12 lg:col-span-4',
-      size: 'medium'
+      size: 'medium',
+      showDietTable: true
     },
     {
       title: 'Class Scheduling',
@@ -84,6 +84,14 @@ const Features = () => {
     ],
     cardio: "Jumping Jacks 20 + Sprint 1 min + High Knees 25 + Shoulder Tap 12"
   };
+
+  // Diet plan data based on FitViz Diet Plan
+  const dietPlanData = [
+    { meal: 'Breakfast', title: 'Chicken Sausage + Eggs + Fruit', items: 'Sausages, egg, orange' },
+    { meal: 'Lunch', title: 'Chicken Salad Bowl', items: 'Chicken, quinoa, greens' },
+    { meal: 'Dinner', title: 'Fish Tikka + Roti + Veg', items: 'Grilled fish, roti, veg' },
+    { meal: 'Snack', title: 'Mixed Nuts + Raisins', items: 'Nuts, raisins' }
+  ];
 
   return (
     <section id="features" className="py-24 md:py-32 relative section-glow">
@@ -181,6 +189,32 @@ const Features = () => {
                         className="w-full h-40 md:h-48 object-cover opacity-70 group-hover:opacity-90 transition-opacity group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#16161A]/80 to-transparent" />
+                    </div>
+                  )}
+
+                  {/* Diet Table Visual */}
+                  {feature.showDietTable && (
+                    <div className="mt-4">
+                      <div className="bg-[#1C1C21] rounded-lg border border-[#303038] overflow-hidden">
+                        {/* Header */}
+                        <div className="px-3 py-2 border-b border-[#303038] flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <span className="text-sm">🥗</span>
+                            <span className="text-xs font-semibold text-[#C8FF00] uppercase tracking-wider">Diet Plan</span>
+                          </div>
+                          <span className="text-xs text-gray-500">Non-Vegetarian</span>
+                        </div>
+                        {/* Meals Grid */}
+                        <div className="grid grid-cols-2 divide-x divide-[#303038]">
+                          {dietPlanData.map((item, i) => (
+                            <div key={i} className={`p-3 ${i >= 2 ? 'border-t border-[#303038]' : ''}`}>
+                              <p className="text-xs font-semibold text-[#C8FF00] uppercase tracking-wider mb-1">{item.meal}</p>
+                              <p className="text-sm font-medium text-white leading-tight">{item.title}</p>
+                              <p className="text-xs text-gray-500 mt-1">{item.items}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   )}
 
