@@ -85,32 +85,6 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">Company</h4>
-            <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">Support</h4>
-            <ul className="space-y-3">
-              {footerLinks.support.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">Legal</h4>
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
