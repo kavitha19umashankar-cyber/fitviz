@@ -35,7 +35,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-24 md:py-32 relative overflow-hidden">
+    <section id="testimonials" className="py-24 md:py-32 relative overflow-hidden section-glow">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header */}
         <motion.div
@@ -44,11 +44,11 @@ const Testimonials = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-xs font-mono uppercase tracking-[0.2em] text-blue-500 mb-4 block">
+          <span className="text-sm font-semibold text-[#b8ec00] uppercase tracking-wider mb-4 block">
             Trusted by 500+ Studios
           </span>
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tight uppercase text-white font-['Barlow_Condensed']">
-            What Our <span className="text-blue-500">Clients</span> Say
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
+            What Our <span className="text-[#C8FF00]">Clients</span> Say
           </h2>
         </motion.div>
 
@@ -64,19 +64,19 @@ const Testimonials = () => {
               className="group"
               data-testid={`testimonial-card-${index}`}
             >
-              <div className="h-full bg-zinc-900/50 border border-white/10 rounded-sm p-6 md:p-8 hover:border-blue-500/50 transition-colors relative">
+              <div className="h-full bg-[#16161A] border border-[#24242A] rounded-xl p-6 md:p-8 hover:border-[#C8FF00]/30 transition-colors relative">
                 {/* Quote Icon */}
-                <Quote className="absolute top-6 right-6 w-10 h-10 text-blue-500/20" />
+                <Quote className="absolute top-6 right-6 w-10 h-10 text-[#C8FF00]/20" />
 
                 {/* Rating */}
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
+                    <Star key={i} className="w-4 h-4 fill-[#facc15] text-[#facc15]" />
                   ))}
                 </div>
 
                 {/* Quote */}
-                <p className="text-base md:text-lg text-zinc-300 leading-relaxed mb-6">
+                <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-6">
                   "{testimonial.quote}"
                 </p>
 
@@ -85,11 +85,11 @@ const Testimonials = () => {
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover border-2 border-white/10"
+                    className="w-12 h-12 rounded-full object-cover border-2 border-[#24242A]"
                   />
                   <div>
-                    <p className="font-bold text-white">{testimonial.name}</p>
-                    <p className="text-sm text-zinc-500">{testimonial.role}</p>
+                    <p className="font-semibold text-white">{testimonial.name}</p>
+                    <p className="text-sm text-gray-500">{testimonial.role}</p>
                   </div>
                 </div>
               </div>
@@ -102,24 +102,24 @@ const Testimonials = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-16 bg-gradient-to-r from-blue-500/10 to-green-500/10 border border-white/10 rounded-sm p-8"
+          className="mt-16 bg-gradient-to-r from-[#C8FF00]/10 to-[#4ade80]/10 border border-[#24242A] rounded-xl p-8"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <p className="text-4xl md:text-5xl font-black text-white font-['Barlow_Condensed']">500+</p>
-              <p className="text-sm text-zinc-400 mt-1">Active Studios</p>
+              <p className="text-4xl md:text-5xl font-bold text-white">500+</p>
+              <p className="text-sm text-gray-400 mt-1">Active Studios</p>
             </div>
             <div>
-              <p className="text-4xl md:text-5xl font-black text-white font-['Barlow_Condensed']">50K+</p>
-              <p className="text-sm text-zinc-400 mt-1">Members Managed</p>
+              <p className="text-4xl md:text-5xl font-bold text-white">50K+</p>
+              <p className="text-sm text-gray-400 mt-1">Members Managed</p>
             </div>
             <div>
-              <p className="text-4xl md:text-5xl font-black text-white font-['Barlow_Condensed']">99.9%</p>
-              <p className="text-sm text-zinc-400 mt-1">Uptime</p>
+              <p className="text-4xl md:text-5xl font-bold text-white">99.9%</p>
+              <p className="text-sm text-gray-400 mt-1">Uptime</p>
             </div>
             <div>
-              <p className="text-4xl md:text-5xl font-black text-green-500 font-['Barlow_Condensed']">4.9</p>
-              <p className="text-sm text-zinc-400 mt-1">Average Rating</p>
+              <p className="text-4xl md:text-5xl font-bold text-[#C8FF00]">4.9</p>
+              <p className="text-sm text-gray-400 mt-1">Average Rating</p>
             </div>
           </div>
         </motion.div>

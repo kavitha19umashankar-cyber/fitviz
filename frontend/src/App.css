@@ -1,10 +1,91 @@
-/* FitViz App Styles */
+/* FitViz App Styles - Brand Guidelines */
+
+/* Primary CTA Button */
+.btn-primary {
+    background: linear-gradient(135deg, #C8FF00 0%, #a3d300 100%);
+    color: #0D0D0F;
+    font-weight: 600;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    transition: all 150ms;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-primary:active {
+    transform: scale(0.95);
+}
+
+/* Ghost Button */
+.btn-ghost {
+    background: #1C1C21;
+    color: #d1d5db;
+    font-weight: 500;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+}
+
+.btn-ghost:hover {
+    background: #24242A;
+    color: white;
+}
+
+/* Danger Button */
+.btn-danger {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    color: white;
+    font-weight: 600;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+}
+
+/* Feature card hover spotlight */
+.feature-card {
+    position: relative;
+    overflow: hidden;
+    background: #16161A;
+    border: 1px solid #24242A;
+    border-radius: 0.75rem;
+    transition: all 300ms;
+}
+
+.feature-card:hover {
+    border-color: rgba(200, 255, 0, 0.3);
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(200, 255, 0, 0.08) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+/* Pricing card glow for Pro tier */
+.pricing-card-pro {
+    position: relative;
+    border: 2px solid #C8FF00;
+    box-shadow:
+        0 0 60px -10px rgba(200, 255, 0, 0.18),
+        0 0 120px -30px rgba(200, 255, 0, 0.10);
+}
 
 /* Animated beam effect */
 .beam {
     position: absolute;
     height: 1px;
-    background: linear-gradient(90deg, transparent, #3B82F6, transparent);
+    background: linear-gradient(90deg, transparent, #C8FF00, transparent);
     animation: beam 3s ease-in-out infinite;
 }
 
@@ -16,97 +97,6 @@
     50% {
         transform: translateX(100%);
         opacity: 1;
-    }
-}
-
-/* Button hover effect */
-.btn-primary {
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-    transform: translate(4px, -4px);
-}
-
-.btn-primary::after {
-    content: '';
-    position: absolute;
-    top: 4px;
-    left: -4px;
-    width: 100%;
-    height: 100%;
-    background: #ffffff;
-    z-index: -1;
-    transition: all 0.3s ease;
-}
-
-.btn-primary:hover::after {
-    top: 8px;
-    left: -8px;
-}
-
-/* Feature card hover spotlight */
-.feature-card {
-    position: relative;
-    overflow: hidden;
-}
-
-.feature-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(59, 130, 246, 0.15) 0%, transparent 50%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-}
-
-.feature-card:hover::before {
-    opacity: 1;
-}
-
-/* Marquee animation */
-@keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-.animate-marquee {
-    animation: marquee 30s linear infinite;
-}
-
-/* Pricing card glow */
-.pricing-card-pro {
-    position: relative;
-}
-
-.pricing-card-pro::before {
-    content: '';
-    position: absolute;
-    inset: -2px;
-    background: linear-gradient(135deg, #3B82F6, #22C55E, #3B82F6);
-    border-radius: 4px;
-    z-index: -1;
-    animation: glow-rotate 3s linear infinite;
-}
-
-@keyframes glow-rotate {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
     }
 }
 
@@ -128,23 +118,53 @@
 
 /* Stats counter */
 .stat-number {
-    background: linear-gradient(180deg, #FAFAFA 0%, #A1A1AA 100%);
+    background: linear-gradient(180deg, #FFFFFF 0%, #9ca3af 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
-/* Glass effect */
-.glass {
-    background: rgba(24, 24, 27, 0.7);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+/* Table */
+.table-container {
+    overflow-x: auto;
+    border-radius: 0.75rem;
+    border: 1px solid #24242A;
+}
+
+.table {
+    width: 100%;
+    font-size: 0.875rem;
+    border-collapse: collapse;
+}
+
+.table thead {
+    background: #1C1C21;
+}
+
+.table th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.table td {
+    padding: 0.75rem 1rem;
+    color: #d1d5db;
+    border-top: 1px solid #1C1C21;
+}
+
+.table tbody tr:hover {
+    background: #1C1C21;
 }
 
 /* Grid pattern */
 .grid-pattern {
     background-image: 
-        linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+        linear-gradient(rgba(200, 255, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200, 255, 0, 0.03) 1px, transparent 1px);
     background-size: 50px 50px;
 }

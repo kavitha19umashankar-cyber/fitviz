@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import { Button } from './ui/button';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,7 +36,7 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 h-20 flex items-center transition-all duration-300 ${
         isScrolled 
-          ? 'bg-black/80 backdrop-blur-xl border-b border-white/5' 
+          ? 'bg-[#111114]/90 backdrop-blur-xl border-b border-[#24242A]' 
           : 'bg-transparent'
       }`}
     >
@@ -48,8 +47,8 @@ const Navbar = () => {
           className="flex items-center gap-2"
           data-testid="navbar-logo"
         >
-          <span className="font-black text-2xl uppercase italic tracking-tighter text-white font-['Barlow_Condensed']">
-            Fit<span className="text-blue-500">Viz</span>
+          <span className="font-bold text-2xl tracking-tight text-white">
+            Fit<span className="text-[#C8FF00]">Viz</span>
           </span>
         </a>
 
@@ -59,7 +58,7 @@ const Navbar = () => {
             <button
               key={link.label}
               onClick={() => scrollToSection(link.href)}
-              className="text-sm font-medium text-zinc-400 hover:text-white transition-colors uppercase tracking-wider"
+              className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
               data-testid={`nav-${link.label.toLowerCase()}`}
             >
               {link.label}
@@ -69,13 +68,13 @@ const Navbar = () => {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <Button
+          <button
             onClick={() => scrollToSection('#contact')}
-            className="bg-blue-600 text-white hover:bg-blue-500 font-bold uppercase tracking-wider rounded-none px-6 py-5 transition-all hover:translate-x-1 hover:-translate-y-1 shadow-[4px_4px_0px_0px_#ffffff]"
+            className="bg-gradient-to-r from-[#C8FF00] to-[#a3d300] text-[#0D0D0F] font-semibold px-6 py-2.5 rounded-lg hover:opacity-90 transition-all active:scale-95"
             data-testid="nav-get-demo-btn"
           >
             Get Demo
-          </Button>
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -94,26 +93,26 @@ const Navbar = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="absolute top-20 left-0 right-0 bg-zinc-900/95 backdrop-blur-xl border-b border-white/10 md:hidden"
+          className="absolute top-20 left-0 right-0 bg-[#111114]/95 backdrop-blur-xl border-b border-[#24242A] md:hidden"
         >
           <div className="px-6 py-6 flex flex-col gap-4">
             {navLinks.map((link) => (
               <button
                 key={link.label}
                 onClick={() => scrollToSection(link.href)}
-                className="text-left text-base font-medium text-zinc-300 hover:text-white transition-colors uppercase tracking-wider py-2"
+                className="text-left text-base font-medium text-gray-300 hover:text-white transition-colors py-2"
                 data-testid={`mobile-nav-${link.label.toLowerCase()}`}
               >
                 {link.label}
               </button>
             ))}
-            <Button
+            <button
               onClick={() => scrollToSection('#contact')}
-              className="bg-blue-600 text-white hover:bg-blue-500 font-bold uppercase tracking-wider rounded-none px-6 py-4 mt-2"
+              className="bg-gradient-to-r from-[#C8FF00] to-[#a3d300] text-[#0D0D0F] font-semibold px-6 py-3 rounded-lg mt-2"
               data-testid="mobile-get-demo-btn"
             >
               Get Demo
-            </Button>
+            </button>
           </div>
         </motion.div>
       )}
