@@ -417,23 +417,23 @@ const Features = () => {
             <div className="grid grid-cols-4 gap-2 mb-3">
               <div className="bg-[#1C1C21] border border-[#C8FF00]/30 rounded-lg p-2">
                 <p className="text-[9px] text-gray-500 uppercase">Members</p>
-                <p className="text-lg font-bold text-white">6</p>
-                <p className="text-[8px] text-[#4ade80]">+1 this month</p>
+                <p className="text-lg font-bold text-white">1645</p>
+                <p className="text-[8px] text-[#4ade80]">+243 this month</p>
               </div>
               <div className="bg-[#1C1C21] border border-cyan-500/30 rounded-lg p-2">
                 <p className="text-[9px] text-gray-500 uppercase">Attendance</p>
-                <p className="text-lg font-bold text-white">0</p>
-                <p className="text-[8px] text-gray-500">2 this month</p>
+                <p className="text-lg font-bold text-white">874</p>
+                <p className="text-[8px] text-gray-400">1453 this month</p>
               </div>
               <div className="bg-[#1C1C21] border border-orange-500/30 rounded-lg p-2">
                 <p className="text-[9px] text-gray-500 uppercase">Revenue</p>
-                <p className="text-lg font-bold text-white">₹1.5k</p>
-                <p className="text-[8px] text-red-400">↓88% vs last</p>
+                <p className="text-lg font-bold text-white">₹8.4L</p>
+                <p className="text-[8px] text-[#4ade80]">↑3% vs last</p>
               </div>
               <div className="bg-[#1C1C21] border border-blue-500/30 rounded-lg p-2">
                 <p className="text-[9px] text-gray-500 uppercase">Plans</p>
-                <p className="text-lg font-bold text-white">4</p>
-                <p className="text-[8px] text-gray-500">0 expiring</p>
+                <p className="text-lg font-bold text-white">1453</p>
+                <p className="text-[8px] text-yellow-400">83 expiring</p>
               </div>
             </div>
             {/* Mini Bar Chart */}
