@@ -220,23 +220,53 @@ const Features = () => {
 
                   {/* Calendar Visual */}
                   {feature.showCalendar && (
-                    <div className="mt-6 bg-[#1C1C21] rounded-lg p-4 border border-[#303038]">
-                      <div className="grid grid-cols-7 gap-1 text-center">
-                        {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((day, i) => (
-                          <span key={i} className="text-xs text-gray-500 font-medium">{day}</span>
-                        ))}
-                        {Array.from({ length: 28 }, (_, i) => (
-                          <div
-                            key={i}
-                            className={`text-xs py-1 rounded ${
-                              [3, 7, 10, 14, 17, 21, 24].includes(i)
-                                ? 'bg-[#C8FF00]/20 text-[#C8FF00]'
-                                : 'text-gray-500 hover:bg-[#24242A]'
-                            }`}
-                          >
-                            {i + 1}
+                    <div className="mt-4">
+                      <div className="bg-[#1C1C21] rounded-lg border border-[#303038] overflow-hidden">
+                        {/* Header */}
+                        <div className="px-3 py-2 border-b border-[#303038]">
+                          <span className="text-xs font-medium text-gray-400">Mar 2026 — Calendar View</span>
+                        </div>
+                        {/* Day Headers */}
+                        <div className="grid grid-cols-7 border-b border-[#303038]">
+                          {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((day, i) => (
+                            <div key={i} className="py-1.5 text-center text-xs text-gray-500 font-medium border-r border-[#303038] last:border-r-0">
+                              {day}
+                            </div>
+                          ))}
+                        </div>
+                        {/* Calendar Grid - First Week */}
+                        <div className="grid grid-cols-7">
+                          {/* Row 1: Days 1-7 */}
+                          <div className="aspect-square p-1 border-r border-b border-[#303038] text-xs text-gray-500">1</div>
+                          <div className="aspect-square p-1 border-r border-b border-[#303038] text-xs text-gray-500">2</div>
+                          <div className="aspect-square p-1 border-r border-b border-[#303038] bg-red-900/40 text-xs">
+                            <span className="text-white">3</span>
+                            <p className="text-[6px] text-gray-300 mt-0.5 leading-tight">Chest + Triceps</p>
                           </div>
-                        ))}
+                          <div className="aspect-square p-1 border-r border-b border-[#303038] bg-[#C8FF00]/80 text-xs">
+                            <span className="text-[#0D0D0F] font-medium">4</span>
+                            <p className="text-[6px] text-[#0D0D0F] mt-0.5 leading-tight">Legs + Glutes</p>
+                          </div>
+                          <div className="aspect-square p-1 border-r border-b border-[#303038] bg-red-900/40 text-xs">
+                            <span className="text-white">5</span>
+                            <p className="text-[6px] text-gray-300 mt-0.5 leading-tight">Core + ABS</p>
+                          </div>
+                          <div className="aspect-square p-1 border-r border-b border-[#303038] bg-blue-900/50 ring-1 ring-[#C8FF00] text-xs">
+                            <span className="text-white font-medium">6</span>
+                            <p className="text-[6px] text-gray-300 mt-0.5 leading-tight">Full Body</p>
+                          </div>
+                          <div className="aspect-square p-1 border-b border-[#303038] text-xs text-gray-500">7</div>
+                          {/* Row 2: Days 8-14 */}
+                          {[8,9,10,11,12,13,14].map((d, i) => (
+                            <div key={d} className={`aspect-square p-1 border-b border-[#303038] text-xs text-gray-500 ${i < 6 ? 'border-r' : ''}`}>{d}</div>
+                          ))}
+                        </div>
+                        {/* Legend */}
+                        <div className="px-2 py-1.5 flex flex-wrap gap-2 text-[7px] border-t border-[#303038]">
+                          <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-sm bg-[#C8FF00]"></span>Completed</span>
+                          <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-sm bg-red-800"></span>Missed</span>
+                          <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-sm bg-blue-900 ring-1 ring-[#C8FF00]"></span>Today</span>
+                        </div>
                       </div>
                     </div>
                   )}
