@@ -285,7 +285,9 @@ const Features = () => {
                           {[
                       { name: 'Sarah Johnson', plan: 'Pro', status: 'active' },
                       { name: 'Mike Williams', plan: 'Basic', status: 'active' },
-                      { name: 'Emily Chen', plan: 'Pro', status: 'pending' }].
+                      { name: 'Emily Chen', plan: 'Pro', status: 'pending' },
+                      { name: 'Raj Patel', plan: 'Pro', status: 'active' },
+                      { name: 'Priya Sharma', plan: 'Basic', status: 'topup' }].
                       map((member, i) =>
                       <div key={i} className="px-4 py-3 flex items-center justify-between">
                               <div className="flex items-center gap-3">
@@ -297,7 +299,7 @@ const Features = () => {
                                   <p className="text-xs text-gray-500">{member.plan} Plan</p>
                                 </div>
                               </div>
-                              <span className={`badge ${member.status === 'active' ? 'badge-green' : 'badge-yellow'}`}>
+                              <span className={`badge ${member.status === 'active' ? 'badge-green' : member.status === 'topup' ? 'badge-blue' : 'badge-yellow'}`}>
                                 {member.status}
                               </span>
                             </div>
